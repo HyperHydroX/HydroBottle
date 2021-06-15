@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <title>HydroBottle</title>
+  </head>
+
+  <body>
+    <header class="c-header">
+      <h1 class="c-header__title">HydroBottle</h1>
+      <nav class="c-header__nav">
+        <ul class="c-nav">
+          <li class="c-nav__item">
+            <a href="index.html" class="c-nav__link">Dashboard</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="history.html" class="c-nav__link">History</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="features.html" class="c-nav__link">Features</a>
+          </li>
+        </ul>
+        <div class="c-nav__button">
+          <div class="c-button__burger"></div>
+        </div>
+      </nav>
+    </header>
+    <main class="o-container">
+      <h1 class="o-title">History</h1>
+      <section class="c-history js-history">
+        <h2 class="c-history__title">Today's activity</h2>
+        <div id="chart__history" class="c-history__chart"></div>
+      </section>
+    </main>
+    <script
+      src="https://cdn.socket.io/4.0.1/socket.io.min.js"
+      integrity="sha384-LzhRnpGmQP+lOvWruF/lgkcqD+WDVt9fU3H4BWmwP5u5LTmkUGafMcpZKNObVMLU"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script defer src="js/dataHandler.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

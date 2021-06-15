@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <title>HydroBottle</title>
+  </head>
+
+  <body>
+    <header class="c-header">
+      <h1 class="c-header__title">HydroBottle</h1>
+      <nav class="c-header__nav">
+        <ul class="c-nav">
+          <li class="c-nav__item">
+            <a href="index.html" class="c-nav__link">Dashboard</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="history.html" class="c-nav__link">History</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="features.html" class="c-nav__link">Features</a>
+          </li>
+        </ul>
+        <div class="c-nav__button">
+          <div class="c-button__burger"></div>
+        </div>
+      </nav>
+    </header>
+    <main class="o-container js-dashboard">
+      <h1 class="o-title">Dashboard</h1>
+      <article class="c-dashboard">
+        <h2 class="o-title">Water consumption</h2>
+        <div id="chart__dashboard"></div>
+        <p class="c-dashboard__streak js-goal_waterconsumption">Goal: 2.0 liters</p>
+        <button class="o-button c-modal__button--open">Add water</button>
+        <div class="c-modal">
+            <div class="c-modal__content">
+                <label for="water_input" class="c-modal__text">How much water did you drink?</label>
+                <input type="text" name="water_input" id="water_input" placeholder="In milliliters" class="c-modal__input js-add__water"> 
+                <button class="o-button c-modal__button--submit js-submit__water">Submit</button>
+            </div>
+        </div>
+        <section class="c-dashboard__info">
+          <h2 class="o-hidden">Dashboard info</h2>
+          <article class="c-info">
+            <h3 class="c-info__title">Watertemp:</h3>
+            <p class="c-dashboard__text c-info__temp js-temp">0</p>
+          </article>
+          <article class="c-info">
+            <h3 class="c-info__title">Bottlecap:</h3>
+            <p class="c-dashboard__text c-info__bottlecap js-bottlecap">0</p>
+          </article>
+        </section>
+      </article>
+    </main>
+    <script
+      src="https://cdn.socket.io/4.0.1/socket.io.min.js"
+      integrity="sha384-LzhRnpGmQP+lOvWruF/lgkcqD+WDVt9fU3H4BWmwP5u5LTmkUGafMcpZKNObVMLU"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script defer src="js/dataHandler.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
